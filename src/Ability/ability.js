@@ -80,8 +80,15 @@ import {EntityUSERMODAbilty,UserAction, USERROLES} from './Actions'
       can("manage",EntityUSERMODAbilty.TDECHARGMENTS);
       can("manage",EntityUSERMODAbilty.FTRANSFERTS);
       can("manage",EntityUSERMODAbilty.STACKS);
-      can("manage",EntityUSERMODAbilty.SUPPLIERS);
 
+      can("manage",EntityUSERMODAbilty.SUPPLIERS);
+      can("manage",EntityUSERMODAbilty.SUPMANAGERS);
+      can("manage",EntityUSERMODAbilty.CARRIERS);
+      can("manage",EntityUSERMODAbilty.DRIVERS);
+
+      can("manage",EntityUSERMODAbilty.VEHICLEBRANDS);
+      can("manage",EntityUSERMODAbilty.VEHICLES);
+      can("manage",EntityUSERMODAbilty.TRAILERS);
 
 
       cannot("manage",EntityUSERMODAbilty.USERS);
