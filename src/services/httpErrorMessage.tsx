@@ -1,0 +1,1 @@
+export const  TYPERROR_FAILEDTOFETCH="TypeError: Failed to fetch";

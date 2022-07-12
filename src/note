@@ -1,0 +1,22 @@
+commande git ****
+1- git init 
+git add README.md
+git add .
+3-git commit -m "first commit"
+4- git branch -M main
+5-git remote add origin https://github.com/gaskobahi/borisrcnapp.git
+6- git push -u origin master afte  git push 
+
+
+if modification *****
+1-git status
+2-git add what in status report
+3-git push
+
+eeee
+git commit -m "initial commit"
+
+git push origin master
+
+
+nestjs event emit https://www.youtube.com/watch?v=0axmglT1c6E
