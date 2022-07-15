@@ -152,7 +152,7 @@ const ModalAddProcurement = (props:ModalAddProcurementProps) => {
       .typeError('MOISTURE must be a number')
       .required('MOISTURE is mandatory')
       .min(0,'MOISTURE  must be greater than or equal to 0')
-      .max(12,'MOISTURE  must be less than or equal to 12'),
+      .max(12,'MOISTURE must be less than or equal to 12'),
       nc: Yup.number()
       .typeError('NET CUT must be a number')
       .positive('NET CUT must be a positive number')
