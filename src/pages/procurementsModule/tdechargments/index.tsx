@@ -59,21 +59,16 @@ import { NotAuthorizedPage } from '../../../Helpers/custom';
         props.getTdechargmentsAction(_onGetTdechargmentsSuccess,_onGetTdechargmentsError)
         props.getTdechargmentsv2Action(_onGetTdechargmentsSuccess,_onGetTdechargmentsError)
 
-        if(!props.getsuppliers){
             props.getSuppliersAction(_onGetSuppliersSuccess,_onGetSuppliersError)
-           }
+           
 
       
-        if(!props.getregions){
-        props.getRegionsAction(_onGetRegionsSuccess,_onGetRegionsError)
-        }
-        if(!props.getplaces){
+           props.getRegionsAction(_onGetRegionsSuccess,_onGetRegionsError)
+        
             props.getPlacesAction(_onGetPlacesSuccess,_onGetPlacesError)
-         }
 
-         if(!props.getftransferts){
             props.getFtransfertsAction(_onGetFtransfertsSuccess,_onGetFtransfertsError)
-         }
+         
         
         
         

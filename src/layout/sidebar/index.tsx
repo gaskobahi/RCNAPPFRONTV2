@@ -1,9 +1,12 @@
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
+import "../../translations/i18n";
 import { EntityUSERMODAbilty, UserAction } from '../../Ability/Actions';
 import CAN from "../../Ability/can";
 
 const SideBar=(props:any)=>{
+  const { t } = useTranslation();
   let {username}=props && props.getuserprofile;
     return(
         <>
@@ -22,7 +25,7 @@ const SideBar=(props:any)=>{
                   <Link to={"./"} className="nav-link active">
                     <i className="nav-icon fas fa-tachometer-alt"></i>
                     <p>
-                      Dashboard
+                        {t("sidebarTitile.Dashboard")}
                     </p>
                   </Link>
                 </li>
@@ -31,7 +34,7 @@ const SideBar=(props:any)=>{
                       <a  className="nav-link ">
                         <i className="nav-icon fas fa-shopping-cart"></i>
                         <p>
-                          PROCUREMENTS
+                           {t("sidebarTitile.modprocurement")}
                           <i className="right fas fa-angle-left"></i>
                         </p>
                       </a>
@@ -43,7 +46,7 @@ const SideBar=(props:any)=>{
                               <Link  to={"./Procurements"} className="nav-link ">
                                 <i className="far fa-circle nav-icon"></i>
                                   <p>
-                                    Procurements
+                                     {t("sidebarTitile.Procurements")}
                                     <span className="badge badge-info right">{props.getprocurementsStats.total}</span>
                                   </p>
                               </Link>
@@ -54,7 +57,7 @@ const SideBar=(props:any)=>{
                             <Link  to={"./Stacks"} className="nav-link ">
                               <i className="far fa-circle nav-icon"></i>
                                 <p>
-                                  Stacks
+                                  {t("sidebarTitile.Stacks")}
                                   <span className="badge badge-info right">{props.getstacks && props.getstacks.length}</span>
                                 </p>
                               </Link>
@@ -66,8 +69,8 @@ const SideBar=(props:any)=>{
                               <Link  to={"./Ftransferts"} className="nav-link ">
                                 <i className="far fa-circle nav-icon"></i>
                                   <p>
-                                    File Transferts
-                                    <span className="badge badge-info right">{props.getftransferts && props.getftransferts.length}</span>
+                                      {t("sidebarTitile.Ftransferts")}
+                                      <span className="badge badge-info right">{props.getftransferts && props.getftransferts.length}</span>
                                   </p>
                               </Link>
                               )}
@@ -77,7 +80,7 @@ const SideBar=(props:any)=>{
                               <Link  to={"./Rcncontrols"} className="nav-link ">
                                 <i className="far fa-circle nav-icon"></i>
                                   <p>
-                                      RCN Controls
+                                      {t("sidebarTitile.Rcncontrols")} 
                                     <span className="badge badge-info right">{props.getrcncontrols && props.getrcncontrols.length}</span>
                                   </p>
                               </Link>
@@ -195,7 +198,7 @@ const SideBar=(props:any)=>{
                       <a  className="nav-link ">
                         <i className="nav-icon fas fa-users"></i>
                         <p>
-                          USERS
+                           {t("sidebarTitile.modusers")}
                           <i className="right fas fa-angle-left"></i>
                         </p>
                       </a>
@@ -252,7 +255,7 @@ const SideBar=(props:any)=>{
                       <a  className="nav-link ">
                         <i className="nav-icon fa fa-map-marker" aria-hidden="false"></i>
                         <p>
-                          LOCATIONS
+                           {t("sidebarTitile.modlocations")}
                           <i className="right fas fa-angle-left"></i>
                         </p>
                       </a>
@@ -263,7 +266,7 @@ const SideBar=(props:any)=>{
                         <Link  to={"./Places"} className="nav-link ">
                           <i className="far fa-circle nav-icon"></i>
                             <p>
-                              Places
+                               {t("sidebarTitile.Places")}
                               <span className="badge badge-info right">{props.getplaces && props.getplaces.length}</span>
                             </p>
                         </Link>
@@ -274,7 +277,7 @@ const SideBar=(props:any)=>{
                       <Link  to={"./Regions"} className="nav-link ">
                         <i className="far fa-circle nav-icon"></i>
                           <p>
-                            Regions
+                              {t("sidebarTitile.Regions")}
                             <span className="badge badge-info right">{props.getregions && props.getregions.length}</span>
                           </p>
                         </Link>

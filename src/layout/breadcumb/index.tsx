@@ -1,4 +1,6 @@
 import * as React from 'react'
+import { useTranslation } from "react-i18next";
+import "../../translations/i18n";
 import { withRouter } from '../../Helpers/wrapperRouter';
 import { redefineTitle } from '../../Helpers/custom/customPageTilte';
 
@@ -11,23 +13,24 @@ import {
 
 
 const BreadCumb=(props:any)=>{
+    const { t } = useTranslation();
     const {navigate,location:{pathname}}=props;
     const pathnames=pathname.split("/").filter((x:any)=>x);
 
     return(
         <div className="row mb-2">
             <div className="col-sm-6">
-            <h4 className="m-0">{redefineTitle(pathname.substr(1))}</h4>
+            <h4 className="m-0">{redefineTitle(t("breadcumb."+pathname.substr(1)))}</h4>
             </div>
             {/*<!-- /.col -->*/}
             <div className="col-sm-6">
             <ol className="breadcrumb float-sm-right">
             <MUIBreadcrumbs aria-label="breadcrumb">
             {pathnames.length > 0 ? (
-                    <Link onClick={() => navigate("/Dashboard")}>Dashboard</Link>
+                    <Link onClick={() => navigate("/Dashboard")}>{t("breadcumb.Dashboard")}</Link>
                 ) :
                  (
-                    <Typography> Dashboard </Typography>
+                    <Typography> {t("breadcumb.Dashboard")} </Typography>
                 )
             }
                 {pathnames.map((name:any, index:any) => {
@@ -37,10 +40,10 @@ const BreadCumb=(props:any)=>{
 
                     return isLast ? (
                         name=="Dashboard"?"":
-                    <Typography key={name}>{name}</Typography>
+                    <Typography key={name}>{t("breadcumb."+name)}</Typography>
                     ) : (
                     <Link onClick={() => navigate(routeTo)}>
-                        {name}
+                        {t("breadcumb."+name)}
                     </Link>
                     );
                 })}

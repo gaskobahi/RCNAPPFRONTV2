@@ -48,12 +48,9 @@ interface PageSupplierProps {
   
     useEffect(()=>{
         props.getSuppliersAction(_onGetSuppliersSuccess,_onGetSuppliersError)
-        if(!props.getplaces){
-            props.getPlacesAction(_onGetPlacesSuccess,_onGetPlacesError)
-           }
-        if(!props.getregions){
+        props.getPlacesAction(_onGetPlacesSuccess,_onGetPlacesError)
         props.getRegionsAction(_onGetRegionsSuccess,_onGetRegionsError)
-        }
+        
            
         
     },[])

@@ -41,9 +41,9 @@ interface PageSupmanagerProps {
 
     useEffect(()=>{
         props.getSupmanagersAction(_onGetSupmanagersSuccess,_onGetSupmanagersError)
-        if(!props.getsuppliers){
-            props.getSuppliersAction(_onGetSuppliersSuccess,_onGetSuppliersError)
-           }
+        
+         props.getSuppliersAction(_onGetSuppliersSuccess,_onGetSuppliersError)
+           
         
         
     },[])

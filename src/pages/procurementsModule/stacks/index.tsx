@@ -37,13 +37,11 @@ import { NotAuthorizedPage } from '../../../Helpers/custom';
   
     useEffect(()=>{
         props.getStacksAction(_onGetStacksSuccess,_onGetStacksError)
-        if(!props.getplaces){
-            props.getPlacesAction(_onGetPlacesSuccess,_onGetPlacesError)
-           }    
-
-        if(!props.getregions){
+       
+        props.getPlacesAction(_onGetPlacesSuccess,_onGetPlacesError)
+             
         props.getRegionsAction(_onGetRegionsSuccess,_onGetRegionsError)
-        }    
+        
     },[])
 
     return (

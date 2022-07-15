@@ -152,7 +152,7 @@ const ModalAddProcurement = (props:ModalAddProcurementProps) => {
       .typeError('MOISTURE must be a number')
       .required('MOISTURE is mandatory')
       .min(0,'MOISTURE  must be greater than or equal to 0')
-      .max(11,'MOISTURE  must be less than or equal to 11'),
+      .max(12,'MOISTURE  must be less than or equal to 12'),
       nc: Yup.number()
       .typeError('NET CUT must be a number')
       .positive('NET CUT must be a positive number')
@@ -288,17 +288,20 @@ const ModalAddProcurement = (props:ModalAddProcurementProps) => {
   }
   
   const _onTdechargementChange=(e:any)=>{
-    //alert(e.target.value)
-    //setValue('bags',e.target.files[0])
-   // setValue('recnetwt',e.target.files[0])
+    e.preventDefault();
       if(e.target.value){
           const bags= props.gettdechargments? props.gettdechargments.find((tdch:any) => tdch.id === e.target.value)?.bags:0;
           const recnetwt= props.gettdechargments? props.gettdechargments.find((tdch:any) => tdch.id === e.target.value)?.recnetwt:0;
+
           setValue('bags',bags)
           setValue('recnetwt',recnetwt)
+          setValue('tdechargmentId',e.target.value,{ shouldValidate: true })
+
       }else{
           setValue('bags',0)
           setValue('recnetwt',0)
+          setValue('tdechargmentId',e.target.value,{ shouldValidate: true })
+
       }
 
   
@@ -477,7 +480,7 @@ const ModalAddProcurement = (props:ModalAddProcurementProps) => {
                         <TextField
                             select
                             label="Select Ticket Decharg. *"
-                            {...register("tdechargmentId")}
+                            //{...register("tdechargmentId")}
                             onChange={(e)=>_onTdechargementChange(e)}
                             SelectProps={{native: true,}}
                             autoComplete="on"

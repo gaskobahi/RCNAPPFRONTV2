@@ -55,7 +55,6 @@ const MainRoutes=(props:any)=>{
                     <Route path="/" element={<Navigate replace to="/Dashboard"/>}/>     
                     <Route path="/Dashboard" element={<Home/>} />
                     <Route path="/Users" element={<UsersPage/>}>   
-                        <Route path="Roleeee" element={<ProfilePage/>}/>
                     </Route>
                     <Route path="Profile" element={<ProfilePage/>}/>
                     <Route path="/Operators" element={<OperatorsPage/>}/>

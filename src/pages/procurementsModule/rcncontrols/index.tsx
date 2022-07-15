@@ -58,21 +58,14 @@ import { NotAuthorizedPage } from '../../../Helpers/custom';
         props.getRcncontrolsv2Action(_onGetRcncontrolsSuccess,_onGetRcncontrolsError)
 
         
-        if(!props.getsuppliers){
-         props.getSuppliersAction(_onGetSuppliersSuccess,_onGetSuppliersError)
-        }
-
+        props.getSuppliersAction(_onGetSuppliersSuccess,_onGetSuppliersError)
      
-        if(!props.getregions){
         props.getRegionsAction(_onGetRegionsSuccess,_onGetRegionsError)
-        }
-        if(!props.getplaces){
-            props.getPlacesAction(_onGetPlacesSuccess,_onGetPlacesError)
-         }
+        
+        props.getPlacesAction(_onGetPlacesSuccess,_onGetPlacesError)
+         
 
-         if(!props.getftransferts){
-            props.getFtransfertsAction(_onGetFtransfertsSuccess,_onGetFtransfertsError)
-         }
+        props.getFtransfertsAction(_onGetFtransfertsSuccess,_onGetFtransfertsError)
         
     },[])
 

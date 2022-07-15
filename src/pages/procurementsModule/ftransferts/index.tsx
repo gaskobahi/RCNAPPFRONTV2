@@ -85,39 +85,23 @@ import { C5_getVehiclebrandsAction } from '../../../redux/actions/ProcurementsMo
     useEffect(()=>{
         props.getFtransfertsAction(_onGetFtransfertsSuccess,_onGetFtransfertsError)
 
-        if(!props.getsuppliers){
-            props.getSuppliersAction(_onGetSuppliersSuccess,_onGetSuppliersError)
-           }
-        if(!props.gettrailers){
-             props.getTrailersAction(_onGetTrailersSuccess,_onGetTrailersError)
-        }
+        props.getSuppliersAction(_onGetSuppliersSuccess,_onGetSuppliersError)
+        
+        props.getTrailersAction(_onGetTrailersSuccess,_onGetTrailersError)
+        
 
-        if(!props.getvehicles){
         props.getVehiclesAction(_onGetVehiclesSuccess,_onGetVehiclesError)
-        }
-   
-        if(!props.getcarriers){
-            props.getCarriersAction(_onGetCarriersSuccess,_onGetCarriersError)
-            }
-        if(!props.getdrivers){
-            props.getDriversAction(_onGetDriversSuccess,_onGetDriversError)
-            }   
-
-        if(!props.getregions){
+        props.getCarriersAction(_onGetCarriersSuccess,_onGetCarriersError)
+            
+        props.getDriversAction(_onGetDriversSuccess,_onGetDriversError)
+               
         props.getRegionsAction(_onGetRegionsSuccess,_onGetRegionsError)
-        }
+        
+        props.getPlacesAction(_onGetPlacesSuccess,_onGetPlacesError)
+         
+        props.getVehiclebrandsAction(_onGetPlacesSuccess,_onGetPlacesError)
 
-        if(!props.getplaces){
-            props.getPlacesAction(_onGetPlacesSuccess,_onGetPlacesError)
-         }
-
-         if(!props.getplaces){
-            props.getVehiclebrandsAction(_onGetPlacesSuccess,_onGetPlacesError)
-         }
-
-         if(!props.getvehiclebrands){
-             props.getVehiclebrandsAction(_onGetVehiclebrandsSuccess,_onGetVehiclebrandsError)
-         }
+        props.getVehiclebrandsAction(_onGetVehiclebrandsSuccess,_onGetVehiclebrandsError)
     },[])
 
     return (
