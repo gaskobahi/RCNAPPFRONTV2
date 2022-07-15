@@ -110,7 +110,7 @@ import {EntityUSERMODAbilty,UserAction, USERROLES} from './Actions'
       can("manage",EntityUSERMODAbilty.SUPPLIERS);
       can("manage",EntityUSERMODAbilty.COOPERATIVES);
       cannot(UserAction.Confirm,EntityUSERMODAbilty.PROCUREMENTS);
-      cannot(UserAction.ReadStatistic,EntityUSERMODAbilty.PROCUREMENTS);
+      can(UserAction.ReadStatistic,EntityUSERMODAbilty.PROCUREMENTS);
       cannot(UserAction.ExportFile,EntityUSERMODAbilty.PROCUREMENTS);
 
       cannot("manage",EntityUSERMODAbilty.USERS);
@@ -139,7 +139,7 @@ import {EntityUSERMODAbilty,UserAction, USERROLES} from './Actions'
         can(UserAction.Read,EntityUSERMODAbilty.SUPPLIERS);
 
         cannot(UserAction.Confirm,EntityUSERMODAbilty.PROCUREMENTS);
-        cannot(UserAction.ReadStatistic,EntityUSERMODAbilty.PROCUREMENTS);
+        can(UserAction.ReadStatistic,EntityUSERMODAbilty.PROCUREMENTS);
         cannot(UserAction.ExportFile,EntityUSERMODAbilty.PROCUREMENTS);
 
         cannot("manage",EntityUSERMODAbilty.USERS);
