@@ -17,8 +17,22 @@ export const TRANSLATIONS_EN = {
         Procurements:"Procurements",
         Stacks:"Stacks",
         Ftransferts:"File Transfert",
-        Rcncontrols:"RCN Controls"
+        Rcncontrols:"RCN Controls",
+        Yieldinspections:"Yield Inspections",
+        Tdechargments:"Ticket Dechargments",
+        Suppliers:"Suppliers",
+        Supmanagers:"Supplier Managers",
+        Carriers:"Carriers",
+        Drivers:"Drivers",
+        Vehicles:"Vehicles",
+        Trailers:"Trailers",
+        Vehiclebrands:"Vehicle Brands",
+        Departments:"Departments",
+        Roles:"Roles",
+        Users:"Users",
+        Operators:"Operators",
 
+        
 
     },
     sidebarTitile:{
@@ -33,7 +47,9 @@ export const TRANSLATIONS_EN = {
         Procurements:"Procurements",
         Stacks:"Stacks",
         Ftransferts:"File Transfert",
-        Rcncontrols:"RCN Controls"
+        Rcncontrols:"RCN Controls",
+        Yieldinspections:"Yield Inspections"
+
 
 
     }
