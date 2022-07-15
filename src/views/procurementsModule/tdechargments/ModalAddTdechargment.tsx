@@ -252,8 +252,7 @@ const ModalAddTdechargment = (props:ModalAddTdechargmentProps) => {
   }
 
    const onInputChange=(e:any)=>{
-     setValue('photo',e.target.files[0])
-
+    setValue('photo',e.target.files[0],{ shouldValidate: true })
    }
 
 

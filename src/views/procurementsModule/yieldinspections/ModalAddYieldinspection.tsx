@@ -224,7 +224,7 @@ const ModalAddYieldinspection = (props:ModalAddYieldinspectionProps) => {
   const _closeAddFtransfertModal=()=>setopenAddFtransfertModal(false)
 
    const onInputChange=(e:any)=>{
-     setValue('photo',e.target.files[0])
+    setValue('photo',e.target.files[0],{ shouldValidate: true })
 
    }
 

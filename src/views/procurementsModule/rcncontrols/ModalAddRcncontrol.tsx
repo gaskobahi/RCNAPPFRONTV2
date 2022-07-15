@@ -217,8 +217,7 @@ const ModalAddRcncontrol = (props:ModalAddRcncontrolProps) => {
   const _closeAddFtransfertModal=()=>setopenAddFtransfertModal(false)
 
    const onInputChange=(e:any)=>{
-     setValue('photo',e.target.files[0])
-
+    setValue('photo',e.target.files[0],{ shouldValidate: true })
    }
 
    const _getRcncontrolCode=(e:any)=>{
